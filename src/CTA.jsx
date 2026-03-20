@@ -11,7 +11,13 @@ const CTA = () => {
 
 			<div className="flex items-center justify-center mt-4">
 				<div>
-					<img src={whatsapp} alt="" className="w-20" />
+					<a
+						href="https://wa.me/233592657381"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src={whatsapp} alt="" className="w-20" />
+					</a>
 				</div>
 				<div className="ml-3">
 					<p>Call 24Hrs/7Days</p>

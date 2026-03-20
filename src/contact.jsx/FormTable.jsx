@@ -102,7 +102,7 @@ const FormTable = () => {
 					</div>
 					<div className="flex gap-2">
 						<Phone />
-						<p>0597361178</p>
+						<p>0592657381</p>
 					</div>
 					<div className="flex gap-2">
 						<LocationEdit />
@@ -131,17 +131,32 @@ const FormTable = () => {
 					<h1 className="font-bold text-lg">Social Media</h1>
 					<p>Follow us on Social Media</p>
 					<div className="flex items-center">
-						<img src={tick} alt="" className="h-10 w-auto" />
-						<img src={whatsapp} alt="" className="w-20" />
-						<img src={mylinkedin} alt="" className="w-20" />
+						<a
+							href="https://www.tiktok.com/@ecoplustechnologies?_r=1&_t=ZS-94q63b3vuZo"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<img src={tick} alt="" className="h-10 w-auto" />
+						</a>
+
+						<a
+							href="https://wa.me/233592657381"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img src={whatsapp} alt="" className="w-20" />
+						</a>
+
+						<a href="">
+							<img src={mylinkedin} alt="" className="w-20" />
+						</a>
 					</div>
 				</div>
 
 				<div className="space-y-4">
 					<h1 className="font-bold text-lg">Subscribe</h1>
 					<p>
-						If you have any questions or need help, feel free to contact with
-						our team
+						Subscribe to our newsletter for security tips and smart technologies
 					</p>
 					<div className="flex">
 						<input

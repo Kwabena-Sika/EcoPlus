@@ -53,7 +53,13 @@ const Navbar = () => {
 				</div>
 
 				<div className="hidden md:flex items-center  text-xs">
-					<img src={whatsapp} alt="" className="w-15  mr-2" />
+					<a
+						href="https://wa.me/233592657381"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src={whatsapp} alt="" className="w-15  mr-2" />
+					</a>
 					<div className="flex flex-col leading-tight">
 						<p>+233 59 265 7381</p>
 						<p>ecoplustechnologies@gmail.com</p>
@@ -106,7 +112,14 @@ const Navbar = () => {
 					</NavLink>
 
 					<div className="flex items-center  text-xs">
-						<img src={whatsapp} alt="" className="w-15  mr-2" />
+						<a
+							href="https://wa.me/233592657381"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img src={whatsapp} alt="" className="w-15  mr-2" />
+						</a>
+
 						<div className="flex flex-col leading-tight">
 							<p>+233 59 265 7381</p>
 							<p>ecoplustechnologies@gmail.com</p>
