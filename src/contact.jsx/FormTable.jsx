@@ -4,6 +4,7 @@ import { LocationEdit, Mail, Phone } from "lucide-react";
 import mylinkedin from "./../assets/linkedin.png";
 import tick from "./../assets/tiktok.png";
 import whatsapp from "./../assets/app.png";
+import { NavLink } from "react-router";
 const FormTable = () => {
 	return (
 		<>
@@ -115,13 +116,18 @@ const FormTable = () => {
 				<div className="space-y-4 mb-10">
 					<h1 className="font-bold text-lg space-x-4">Quick Links</h1>
 					<div className="flex items-center gap-10">
-						<div className="space-y-4">
-							<p>Home</p>
-							<p>About</p>
-							<p>Services</p>
+						<div className="flex flex-col space-y-5">
+							<NavLink to={"/"}>Home</NavLink>
+
+							<NavLink to={"/about"}>About</NavLink>
+
+							<NavLink to={"/services"}>Services</NavLink>
 						</div>
-						<div className="space-y-4 ">
-							<p>Contact</p>
+						<div className="space-y-4 flex flex-col">
+							<NavLink to={"/contact"}>
+								<p>Contact</p>
+							</NavLink>
+
 							<p>Download Brochure</p>
 						</div>
 					</div>

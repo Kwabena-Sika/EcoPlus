@@ -1,5 +1,6 @@
 import React from "react";
 import myLock from "./assets/lock.png";
+import { CircleCheck } from "lucide-react";
 
 const Thief = () => {
 	return (
@@ -27,20 +28,28 @@ const Thief = () => {
 							keeping the right people in, and the rest out.
 						</p>
 					</div>
-					<div className="mt-10 font-bold leading-loose space-y-5">
-						<li>
-							Restrict Access Instantly: Grant or revoke entry permission
-							remotely in real time
-						</li>
-						<li>
-							Total Entry Visibility: Know Exactly who entered which door and
-							exactly when they did it
-						</li>
-						<li>Ditch the metal Keys and Go Keyless & Credential Free</li>
+					<div className="mt-10 font-semibold leading-loose space-y-5">
+						<div>
+							<CircleCheck />
+							<p>
+								Restrict Access Instantly: Grant or revoke entry permission
+								remotely in real time
+							</p>
+						</div>
+
+						<div>
+							<CircleCheck />
+							<p>
+								Total Entry Visibility:Know Exactly who entered whihc door and
+								exactly when they did it
+							</p>
+						</div>
+
+						<div>
+							<CircleCheck />
+							<p>Ditch the metal Keys and Go Keyless & Credential Free</p>
+						</div>
 					</div>
-					<button className="bg-[#82b440] px-10 py-4 hover:bg-[#202d32] text-white mt-10">
-						Meet Our Experts
-					</button>
 				</div>
 				<div className="mt-10  ">
 					<div className="">

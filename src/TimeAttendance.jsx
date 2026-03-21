@@ -26,9 +26,7 @@ const TimeAttendance = () => {
 						exact work hours for error-free payroll.
 					</p>
 
-					<button className="bg-[#202d32] text-[#ffff] px-10 py-4">
-						Start a Quote
-					</button>
+					
 				</div>
 				<div className="md:w-[40%] mt-5">
 					<img src={time} alt="" />

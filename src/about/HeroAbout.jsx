@@ -21,7 +21,11 @@ const HeroAbout = () => {
 					<p className="text-6xl font-semibold md:max-w-[70%] text-center m-auto mt-4">
 						Call Us Now !!
 					</p>
-					<button className="mt-5 bg-black px-10 py-4">Contact Us</button>
+					<NavLink to={"/contact"}>
+						<button className="mt-5 bg-black px-10 py-4 cursor-pointer">
+							Contact Us
+						</button>
+					</NavLink>
 				</div>
 			</div>
 		</>

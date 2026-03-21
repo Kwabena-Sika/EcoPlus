@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import myHero from "./../assets/thief.png";
-import ccTv from "./../assets/cctvcamera.svg";
 import mylock from "./../assets/lock.png";
 import mydoorbell from "./../assets/doorbell.mp4";
 import bb from "./../assets/boombarriers.png";
 import mycams from "./../assets/cams.png";
-import { CheckCircle } from "lucide-react";
+import {
+	BuildingIcon,
+	CheckCircle,
+	ChurchIcon,
+	Home,
+	HomeIcon,
+	SchoolIcon,
+} from "lucide-react";
 import smarthome from "./../assets/smart.mp4";
 import smartspeakers from "./../assets/speakers.png";
 import robot from "./../assets/robot.png";
@@ -15,7 +20,11 @@ import battery from "./../assets/battery.png";
 import plant from "./../assets/plant.png";
 import clockin from "./../assets/time.mp4";
 import barcode from "./../assets/barcode.png";
-
+import router from "./../assets/router.mp4";
+import wifi from "./../assets/wifi.png";
+import mobile from "./../assets/mobile.png";
+import mobile1 from "./../assets/mobile1.png";
+import { NavLink } from "react-router";
 const ServiceContent = () => {
 	const [activeStep, setActiveStep] = useState(1);
 	return (
@@ -417,7 +426,7 @@ const ServiceContent = () => {
 						</p>
 
 						<h1 className="text-2xl font-bold ">
-							Let the Sun Power Your Home or Office
+							Save Time By Automating Everyday Task With Our Business Solutions
 						</h1>
 
 						<div className="md:grid grid-cols-2 gap-10">
@@ -466,30 +475,32 @@ const ServiceContent = () => {
 						/>
 
 						<h1 className="text-2xl font-bold ">
-							Why EcoPlus Energy Makes a Difference
+							Why Our Solution Makes a Difference
 						</h1>
 						<div className="md:grid md:grid-cols-2 gap-4">
 							<div className="space-y-4">
 								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
 									<CheckCircle />
-									<p className="">Reliable Power</p>
+									<p className="">Save time by automating everyday task</p>
 								</div>
 
 								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
 									<CheckCircle />
-									<p className="">Less Energy Waste</p>
+									<p className="">Keep Everything organized in one place</p>
 								</div>
 							</div>
 
 							<div className="space-y-4">
 								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
 									<CheckCircle />
-									<p className="">Lower Electriciy Bills</p>
+									<p className="">Make faster, smarter decision</p>
 								</div>
 
 								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
 									<CheckCircle />
-									<p className="">Long-Term Savings</p>
+									<p className="">
+										Grow your business with scalable, flexible systems
+									</p>
 								</div>
 							</div>
 						</div>
@@ -502,109 +513,195 @@ const ServiceContent = () => {
 				)}
 
 				{activeStep === 5 && (
-					<div className="w-full pl-10 space-y-10">
-						<h1 className="text-2xl font-semibold tracking-wide">Overview</h1>
-						<p className="leading-relaxed text-gray-400">
-							You can quickly set up or delete access for employees, get
-							access-triggered alerts when certain doors are opened, and quickly
-							find video clips of access events. You can also lock and unlock
-							any door remotely, and even have your business lock itself
-							automatically at closing time. Smart fire alarm systems assist in
-							providing vital protection to businesses, landlords and public
-							sector buildings by enhancing traditional fire detection
-							equipment. Find out how smart fire alarm systems work and what
-							t...
+					<div className="w-full md:pl-10 space-y-10">
+						<h1 className="text-3xl font-bold tracking-wide ">
+							Connectivity and Network Installation
+						</h1>
+						<p className="leading-relaxed text-zinc-700">
+							At EcoPlus, we provide reliable connectivity and network
+							installation services that keep your business running smoothly.
+							From setup to optimization, we ensure your system are fast,
+							secure, and always connected so you team can work without
+							interruptions
 						</p>
 
-						<p className="leading-relaxed text-gray-400">
-							Reliable, professional monitoring ensures your business, inventory
-							and equipment are always protected. Combined with STANLEY Security
-							systems, you have security that goes the extra mile.
-						</p>
+						<h1 className="text-2xl font-bold ">Our Solutions</h1>
 
-						<img src={myHero} alt="" className="w-[50%]" />
+						<div className="md:grid grid-cols-2 gap-10">
+							<div className="space-y-4">
+								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
+									<CheckCircle />
+									<p className="">Router and Wi-Fi installation</p>
+								</div>
 
-						<p className="leading-relaxed text-gray-400 ">
-							We pride ourselves on going above and beyond for the customer on
-							every project we take on. Whether you’re looking for a
-							surveillance camera installation or an access control system
-							installation, it’s important that the security system installer
-							you choose has the experience and vision to help you achieve your
-							security goals. Our commercial security services are about more
-							than surveillance system installation or alarm system
-							installation. It’s our commitment to customer success before and
-							after the project that sets us apart from our competitors. When we
-							tackle a project that integrates a security system, we take a
-							wholistic approach to installing business security cameras, Access
-							Control Systems, commercial alarm systems, or cctv cameras.
-						</p>
+								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
+									<CheckCircle />
+									<p className="">Structured cabling and network setup</p>
+								</div>
+							</div>
 
-						<p className="leading-relaxed text-gray-400">
-							From the engineering process to the final customer training, we
-							treat our customers like our partner because that’s the Safe and
-							Sound Security way. When it comes to providing the best security
-							system services for the enterprise sector, no one knows the
-							landscape better than security. We’ve worked with national level
-							enterprises to local businesses and everything in between.
-						</p>
+							<div className="space-y-4">
+								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
+									<CheckCircle />
+									<p className="">Netwrok troubleshooting</p>
+								</div>
 
-						<div className="flex gap-10">
-							<img src={myHero} alt="" className="w-[50%]" />
-							<img src={myHero} alt="" className="w-[50%]" />
+								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
+									<CheckCircle />
+									<p className="">
+										Secure network configuration and access control
+									</p>
+								</div>
+							</div>
+						</div>
+						<video
+							src={router}
+							alt=""
+							className="md:w-[50%]"
+							controls
+							autoPlay
+							loop
+							muted
+						/>
+
+						<h1 className="text-2xl font-bold ">
+							Why Our Solution Makes a Difference
+						</h1>
+						<div className="md:grid md:grid-cols-2 gap-4">
+							<div className="space-y-4">
+								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
+									<CheckCircle />
+									<p className="">
+										Fast and stable connections you can rely on
+									</p>
+								</div>
+
+								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
+									<CheckCircle />
+									<p className="">
+										Tailored setups designed for your business needs
+									</p>
+								</div>
+							</div>
+
+							<div className="space-y-4">
+								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
+									<CheckCircle />
+									<p className="">
+										Strong security to protect your data and systems
+									</p>
+								</div>
+
+								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
+									<CheckCircle />
+									<p className="">
+										Ongoing support to keep everything running at its best
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div className="md:flex gap-10">
+							<img src={barcode} alt="" className="md:w-[50%]" />
+							<img src={wifi} alt="" className="md:w-[50%]" />
 						</div>
 					</div>
 				)}
 
 				{activeStep === 6 && (
-					<div className="w-full pl-10 space-y-10">
-						<h1 className="text-2xl font-semibold tracking-wide">Overview</h1>
-						<p className="leading-relaxed text-gray-400">
-							You can quickly set up or delete access for employees, get
-							access-triggered alerts when certain doors are opened, and quickly
-							find video clips of access events. You can also lock and unlock
-							any door remotely, and even have your business lock itself
-							automatically at closing time. Smart fire alarm systems assist in
-							providing vital protection to businesses, landlords and public
-							sector buildings by enhancing traditional fire detection
-							equipment. Find out how smart fire alarm systems work and what
-							t...
+					<div className="w-full md:pl-10 space-y-10">
+						<h1 className="text-3xl font-bold tracking-wide ">
+							Software Integration and Automation
+						</h1>
+						<p className="leading-relaxed text-zinc-700">
+							At EcoPlus, we help businesses bring all their software and
+							systems together into one connected environment. Our integration
+							solutions ensure your tools communicate effectively, your data
+							synchronized, and your operations run smoothly without unncessary
+							manual work.
 						</p>
 
-						<p className="leading-relaxed text-gray-400">
-							Reliable, professional monitoring ensures your business, inventory
-							and equipment are always protected. Combined with STANLEY Security
-							systems, you have security that goes the extra mile.
-						</p>
+						<h1 className="text-2xl font-bold ">Our Solutions</h1>
 
-						<img src={myHero} alt="" className="w-[50%]" />
+						<div className="md:grid grid-cols-2 gap-10">
+							<div className="space-y-4">
+								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
+									<CheckCircle />
+									<p className="">
+										API integration between platform and applications
+									</p>
+								</div>
 
-						<p className="leading-relaxed text-gray-400 ">
-							We pride ourselves on going above and beyond for the customer on
-							every project we take on. Whether you’re looking for a
-							surveillance camera installation or an access control system
-							installation, it’s important that the security system installer
-							you choose has the experience and vision to help you achieve your
-							security goals. Our commercial security services are about more
-							than surveillance system installation or alarm system
-							installation. It’s our commitment to customer success before and
-							after the project that sets us apart from our competitors. When we
-							tackle a project that integrates a security system, we take a
-							wholistic approach to installing business security cameras, Access
-							Control Systems, commercial alarm systems, or cctv cameras.
-						</p>
+								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
+									<CheckCircle />
+									<p className="">
+										CRM, ERP, and third-party software integration
+									</p>
+								</div>
+							</div>
 
-						<p className="leading-relaxed text-gray-400">
-							From the engineering process to the final customer training, we
-							treat our customers like our partner because that’s the Safe and
-							Sound Security way. When it comes to providing the best security
-							system services for the enterprise sector, no one knows the
-							landscape better than security. We’ve worked with national level
-							enterprises to local businesses and everything in between.
-						</p>
+							<div className="space-y-4">
+								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
+									<CheckCircle />
+									<p className="">
+										Data synchronization and workflow automation
+									</p>
+								</div>
 
-						<div className="flex gap-10">
-							<img src={myHero} alt="" className="w-[50%]" />
-							<img src={myHero} alt="" className="w-[50%]" />
+								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
+									<CheckCircle />
+									<p className="">
+										Custom integration solution tailored to business needs
+									</p>
+								</div>
+							</div>
+						</div>
+						<video
+							src={clockin}
+							alt=""
+							className="md:w-[50%]"
+							controls
+							autoPlay
+							loop
+							muted
+						/>
+
+						<h1 className="text-2xl font-bold ">
+							Why Our Solution Makes a Difference
+						</h1>
+						<div className="md:grid md:grid-cols-2 gap-4">
+							<div className="space-y-4">
+								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
+									<CheckCircle />
+									<p className="">
+										Seamless communication between all your systems
+									</p>
+								</div>
+
+								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
+									<CheckCircle />
+									<p className="">Reduced manual work through automation</p>
+								</div>
+							</div>
+
+							<div className="space-y-4">
+								<div className=" text-black p-4 border-t border-gray-100 flex gap-4 items-center">
+									<CheckCircle />
+									<p className="">
+										Strong security to protect your data and systems
+									</p>
+								</div>
+
+								<div className=" text-black p-4  border-t border-gray-200 flex gap-4">
+									<CheckCircle />
+									<p className="">Real-time, accurate data across platform</p>
+								</div>
+							</div>
+						</div>
+
+						<div className="md:flex gap-10">
+							<img src={mobile1} alt="" className="md:w-[50%]" />
+							<img src={mobile} alt="" className="md:w-[50%]" />
 						</div>
 					</div>
 				)}
@@ -676,52 +773,52 @@ const ServiceContent = () => {
 
 			<div className="md:grid md:grid-cols-3 gap-5 mb-10">
 				<div className="bg-white shadow-xl p-6 hover:bg-[#82b440] hover:shadow-xl transition-shadow duration-300 md:h-[70vh]  hover:text-white w-full">
-					<img src={ccTv} alt="" className="w-[25%] text-center" />
+					<ChurchIcon size={80} />
 					<p className="font-bold text-2xl mt-10">Churches</p>
-					<p className="leading-relaxed mt-4 text-zinc-500">
+					<p className="leading-relaxed mt-4">
 						Clever security system connects your security, CCTV, lights, locks
 						and more, for true seamless automation and control
 					</p>
 				</div>
 
 				<div className="bg-white shadow-xl p-6 hover:bg-[#82b440] hover:shadow-xl transition-shadow duration-300 md:h-[70vh]  hover:text-white w-full">
-					<img src={ccTv} alt="" className="w-[25%] text-center" />
+					<SchoolIcon size={80} />
 					<p className="font-bold text-2xl mt-10">Schools</p>
-					<p className="leading-relaxed mt-4 text-zinc-500">
+					<p className="leading-relaxed mt-4">
 						Clever security system connects your security, CCTV, lights, locks
 						and more, for true seamless automation and control
 					</p>
 				</div>
 
 				<div className="bg-white shadow-xl p-6 hover:bg-[#82b440] hover:shadow-xl transition-shadow duration-300 md:h-[70vh] w-full hover:text-white ">
-					<img src={ccTv} alt="" className="w-[25%] text-center" />
+					<HomeIcon size={80} />
 					<p className="font-bold text-2xl mt-10">Office Buildings</p>
-					<p className="leading-relaxed mt-4 text-zinc-500">
+					<p className="leading-relaxed mt-4">
 						Clever security system connects your security, CCTV, lights, locks
 						and more, for true seamless automation and control
 					</p>
 				</div>
 
 				<div className="bg-white shadow-xl p-6 hover:bg-[#82b440] hover:shadow-xl transition-shadow duration-300 md:h-[70vh] w-full hover:text-white ">
-					<img src={ccTv} alt="" className="w-[25%] text-center" />
+					<SchoolIcon size={80} />
 					<p className="font-bold text-2xl mt-10">Homes</p>
-					<p className="leading-relaxed mt-4 text-zinc-500">
+					<p className="leading-relaxed mt-4">
 						Clever security system connects your security, CCTV, lights, locks
 						and more, for true seamless automation and control
 					</p>
 				</div>
 				<div className="bg-white shadow-xl p-6 hover:bg-[#82b440] hover:shadow-xl transition-shadow duration-300 md:h-[70vh] w-full hover:text-white ">
-					<img src={ccTv} alt="" className="w-[25%] text-center" />
+					<Home size={80} />
 					<p className="font-bold text-2xl mt-10">Retail Shops</p>
-					<p className="leading-relaxed mt-4 text-zinc-500">
+					<p className="leading-relaxed mt-4 ">
 						Clever security system connects your security, CCTV, lights, locks
 						and more, for true seamless automation and control
 					</p>
 				</div>
 				<div className="bg-white shadow-xl p-6 hover:bg-[#82b440] hover:shadow-xl transition-shadow duration-300 md:h-[70vh] w-full hover:text-white ">
-					<img src={ccTv} alt="" className="w-[25%] text-center" />
+					<BuildingIcon size={80} />
 					<p className="font-bold text-2xl mt-10">Warehouse</p>
-					<p className="leading-relaxed mt-4 text-zinc-500">
+					<p className="leading-relaxed mt-4">
 						Clever security system connects your security, CCTV, lights, locks
 						and more, for true seamless automation and control
 					</p>
@@ -738,7 +835,11 @@ const ServiceContent = () => {
 					<p className="text-6xl font-semibold max-w-[70%] text-center m-auto">
 						We Are just a Call Away
 					</p>
-					<button className="mt-5 bg-black px-10 py-4">Contact Us</button>
+					<NavLink to={"/contact"}>
+						<button className="mt-5 bg-black px-10 py-4 cursor-pointer">
+							Contact Us
+						</button>
+					</NavLink>
 				</div>
 			</div>
 		</>

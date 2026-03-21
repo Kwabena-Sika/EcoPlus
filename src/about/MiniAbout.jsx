@@ -2,7 +2,13 @@ import React from "react";
 import Time from "./../assets/clockin.png";
 import WhyChooseUs from "./WhyChooseUs";
 import OurProcess from "./OurProcess";
-import { Binoculars, HeartHandshake, Leaf, Target } from "lucide-react";
+import {
+	Binoculars,
+	CheckCircle,
+	HeartHandshake,
+	Leaf,
+	Target,
+} from "lucide-react";
 
 const MiniAbout = () => {
 	return (
@@ -71,22 +77,39 @@ const MiniAbout = () => {
 				<div className="bg-white shadow-xl p-6 hover:bg-[#82b440] hover:shadow-xl transition-shadow duration-300 md:h-[70vh] md:w-3/5 hover:text-white ">
 					<HeartHandshake size={60} />
 					<p className="font-bold text-2xl mt-10">Values</p>
-					<p className="leading-relaxed mt-4">
-						<li>Innovation</li>
-						<li>Integrity</li>
-						<li>Reliability</li>
-						<li>Customer Focus</li>
-					</p>
+					<div className="leading-relaxed mt-4 space-y-4">
+						<div className="flex gap-3">
+							<CheckCircle />
+							<p>Innovation</p>
+						</div>
+						<div className="flex gap-3">
+							<CheckCircle />
+							<p>Reliability</p>
+						</div>
+						<div className="flex gap-3">
+							<CheckCircle />
+							<p>Customer Focus</p>
+						</div>
+					</div>
 				</div>
 
 				<div className="bg-white shadow-xl p-6 hover:bg-[#82b440] hover:shadow-xl transition-shadow duration-300 md:h-[70vh] md:w-3/5 hover:text-white ">
 					<Leaf size={60} />
 					<p className="font-bold text-2xl mt-10">Sustainability Goals</p>
-					<p className="leading-relaxed mt-4">
-						<li>Energy Efficiency</li>
-						<li>Responsible Technology</li>
-						<li>Future Innovation</li>
-					</p>
+					<div className="leading-relaxed mt-4 space-y-4">
+						<div className="flex gap-3">
+							<CheckCircle />
+							<p>Energy Efficiency</p>
+						</div>
+						<div className="flex gap-3">
+							<CheckCircle />
+							<p>Responsible Technology</p>
+						</div>
+						<div className="flex gap-3">
+							<CheckCircle />
+							<p>Future Innovation</p>
+						</div>
+					</div>
 				</div>
 			</div>
 

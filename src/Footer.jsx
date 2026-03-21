@@ -3,6 +3,7 @@ import { LocationEdit, Mail, Phone } from "lucide-react";
 import tick from "./assets/tiktok.png";
 import whatsapp from "./assets/app.png";
 import mylinkedin from "./assets/linkedin.png";
+import { NavLink } from "react-router";
 
 const Footer = () => {
 	return (
@@ -33,13 +34,13 @@ const Footer = () => {
 				<div className="space-y-4 mb-10">
 					<h1 className="font-bold text-lg space-x-4">Quick Links</h1>
 					<div className="flex items-center gap-10">
-						<div className="space-y-4">
-							<p>Home</p>
-							<p>About</p>
-							<p>Services</p>
+						<div className="space-y-4 flex-col flex">
+							<NavLink to={"/"}>Home</NavLink>
+							<NavLink to={"/about"}>About</NavLink>
+							<NavLink to={"/services"}>Services</NavLink>
 						</div>
-						<div className="space-y-4 ">
-							<p>Contact</p>
+						<div className="space-y-4 flex-col flex ">
+							<NavLink to={"/contact"}>Contact</NavLink>
 							<p>Download Brochure</p>
 						</div>
 					</div>
