@@ -64,7 +64,11 @@ const Footer = () => {
 						>
 							<img src={whatsapp} alt="" className="w-20" />
 						</a>
-						<a href="">
+						<a
+							href="https://www.linkedin.com/company/ecoplus-technologies/?viewAsMember=true"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<img src={mylinkedin} alt="" className="w-20" />
 						</a>
 					</div>

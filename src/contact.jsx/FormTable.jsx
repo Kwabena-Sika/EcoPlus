@@ -65,11 +65,26 @@ const FormTable = () => {
 							placeholder="0244579636"
 							className="outline-none  px-5 py-2 border border-gray-200 w-full"
 						/>
-						<input
-							type="text"
-							placeholder="Select your service"
-							className="outline-none  px-5 py-2 border border-gray-200 w-full"
-						/>
+						<select
+							name="Select your Service"
+							id=""
+							className="outline-none border border-gray-200 w-full text-gray-600"
+						>
+							<option value="" disabled>
+								Select your service
+							</option>
+							<option value="security">Security System</option>
+							<option value="fire">Fire Detection & Life Safety</option>
+							<option value="smart">Smart Home Systems</option>
+							<option value="energy">Energy Solutions</option>
+							<option value="business">Business Solutions</option>
+							<option value="network">
+								Connectivity & Network Installation
+							</option>
+							<option value="software">
+								Software Integration & Automation
+							</option>
+						</select>
 					</div>
 
 					<div>
@@ -153,7 +168,11 @@ const FormTable = () => {
 							<img src={whatsapp} alt="" className="w-20" />
 						</a>
 
-						<a href="">
+						<a
+							href="https://www.linkedin.com/company/ecoplus-technologies/?viewAsMember=true"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<img src={mylinkedin} alt="" className="w-20" />
 						</a>
 					</div>
