@@ -1,11 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import mylock from "./../assets/lock.png";
 import { LocationEdit, Mail, Phone } from "lucide-react";
 import mylinkedin from "./../assets/linkedin.png";
 import tick from "./../assets/tiktok.png";
 import whatsapp from "./../assets/app.png";
 import { NavLink } from "react-router";
+
 const FormTable = () => {
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		phone_number: "",
+		service: "",
+		message: "",
+	});
+
+	const handleChange = (e) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		try {
+			const response = await fetch("http://127.0.0.1:8000/api/contact/", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+				alert("Message sent succesfully");
+
+				setFormData({
+					name: "",
+					email: "",
+					phone_number: "",
+					service: "",
+					message: "",
+				});
+			} else {
+				alert(data.error || "Something went wrong");
+			}
+		} catch (error) {
+			console.error("Error:", error);
+			alert("Network error");
+		}
+	};
 	return (
 		<>
 			<div className="p-5 md:p-10 md:flex gap-20">
@@ -37,7 +85,7 @@ const FormTable = () => {
 					</div>
 				</div>
 
-				<form action="" className="space-y-10">
+				<form onSubmit={handleSubmit} className="space-y-10">
 					<div>
 						<h1 className="font-bold text-2xl">Get in Touch</h1>
 						<p className="mt-3 text-zinc-500">
@@ -49,11 +97,17 @@ const FormTable = () => {
 					<div className="md:flex md:justify-between md:gap-5 space-y-4">
 						<input
 							type="text"
+							name="name"
+							value={formData.name}
+							onChange={handleChange}
 							placeholder="Name"
 							className="outline-none  px-5 py-2 border border-gray-200 w-full"
 						/>
 						<input
 							type="text"
+							name="email"
+							value={formData.email}
+							onChange={handleChange}
 							placeholder="Email"
 							className="outline-none  px-5 py-2 border border-gray-200 w-full"
 						/>
@@ -62,11 +116,16 @@ const FormTable = () => {
 					<div className="md:flex md:justify-between md:gap-5 space-y-4">
 						<input
 							type="text"
+							name="phone_number"
+							value={formData.phone_number}
+							onChange={handleChange}
 							placeholder="0244579636"
 							className="outline-none  px-5 py-2 border border-gray-200 w-full"
 						/>
 						<select
-							name="Select your Service"
+							name="service"
+							value={formData.service}
+							onChange={handleChange}
 							id=""
 							className="outline-none border border-gray-200 w-full text-gray-600"
 						>
@@ -89,7 +148,9 @@ const FormTable = () => {
 
 					<div>
 						<textarea
-							name=""
+							name="message"
+							value={formData.message}
+							onChange={handleChange}
 							id=""
 							placeholder="Additional Details"
 							className="outline-none  px-5 py-2 border border-gray-200 w-full h-full"
@@ -98,7 +159,7 @@ const FormTable = () => {
 
 					<button
 						type="submit"
-						className="bg-black py-5 px-8 text-white font-semibold "
+						className="bg-black py-5 px-8 text-white font-semibold cursor-pointer "
 					>
 						Submit Request
 					</button>
